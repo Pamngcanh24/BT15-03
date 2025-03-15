@@ -1,0 +1,476 @@
+/* Thiết lập cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    
+    transform: scale(0.6667);
+    transform-origin: top left;
+    width: calc(100% / 0.6667); /* Điều chỉnh lại width để sau khi scale vẫn full màn hình */
+    height: auto; /* Đảm bảo nội dung không bị cắt */
+    overflow-x: hidden; /* Tránh thanh cuộn ngang nếu có */
+
+}
+
+/* Header */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 315px;
+    background: #fff;
+}
+
+.search-icon {
+    width: 24px; /* Đặt chiều rộng */
+    height: 24px; /* Đặt chiều cao */
+    cursor: pointer; /* Hiển thị tay khi di chuột */
+}
+
+
+/* Reset mặc định */
+nav a {
+    text-decoration: none;
+    padding: 5px 10px; /* Giảm khoảng cách */
+    font-size: 14px; /* Giảm kích thước chữ */
+    color: black;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-right {
+    display: flex; /* Hiển thị các phần tử theo chiều ngang */
+    gap: 20px; /* Tạo khoảng cách giữa các phần tử */
+    justify-content: center;
+    align-items: center;
+}
+/* Xóa gạch chân của các link */
+.nav-right .btn {
+    text-decoration: none; /* Xóa gạch chân */
+    color: black; /* Đảm bảo màu chữ */
+    font-size: 14px; /* Giảm kích thước chữ */
+    font-weight: bold;
+
+}
+
+.nav-right .btn:hover {
+    display: flex; /* Hiển thị các phần tử theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 10px; /* Tạo khoảng cách giữa các phần tử */
+}
+
+/* Hover: Khi di chuột */
+nav a:hover {
+    color: #FF4500; /* Màu cam */
+}
+
+/* Active: Khi nhấn giữ */
+nav a:active {
+    color: #FF4500; /* Màu cam */
+}
+
+.search-icon {
+    font-size: 16px; /* Điều chỉnh kích thước icon */
+    cursor: pointer; /* Biểu tượng con trỏ khi di chuột */
+    line-height: 1; /* Đảm bảo căn giữa dọc */
+}
+.banner {
+    display: flex;
+    justify-content: center; /* Căn giữa ngang */
+    align-items: center; /* Căn giữa dọc */
+    width: 100%;
+    padding: 40px 0; /* Điều chỉnh khoảng cách trên dưới */
+    background: none; /* Xóa nền gradient */
+}
+
+.banner-image > img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Top Categories Section */
+.categories {
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* Căn chỉnh lại phần header */
+.categories-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Đưa nội dung xuống dưới */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.categories-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.categories-header p {
+    font-size: 16px;
+    color: gray;
+}
+
+.all-categories-btn {
+    padding: 10px 20px;
+    background: none;
+    border: 2px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.all-categories-btn:hover {
+    background: black;
+    color: white;
+}
+.categories-subtitle {
+    font-size: 16px;
+    color: gray;
+    margin-top: 10px;
+}
+/* Category Grid */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.category-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    cursor: pointer; /* Hiển thị con trỏ khi di chuột */
+}
+/* Khi category được chọn (active) */
+input[type="radio"]:checked + .category-item {
+    background: rgba(255, 165, 0, 0.1); /* Nền cam nhạt */
+    transform: scale(1.1); /* Phóng to nhẹ */
+    box-shadow: 0px 8px 12px rgba(255, 140, 0, 0.2); /* Đổ bóng */
+}
+
+/* Hover khi chưa active */
+.category-item:hover {
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+}
+
+/* Hiệu ứng khi hover vào category đang active */
+input[type="radio"]:checked + .category-item:hover {
+    transform: scale(1.15); /* Phóng to hơn khi hover */
+    box-shadow: 0px 12px 16px rgba(255, 140, 0, 0.3);
+}
+
+/* Nổi bật mục "Development" */
+.category-item.active {
+    background: rgba(255, 165, 0, 0.1); /* Nền cam nhạt */
+    transform: scale(1.1); /* Phóng to nhẹ */
+    box-shadow: 0px 8px 12px rgba(255, 140, 0, 0.2); /* Bóng đổ */
+}
+
+/* Hiệu ứng khi di chuột vào mục active */
+.category-item.active:hover {
+    transform: scale(1.15); /* Phóng to hơn khi hover */
+    box-shadow: 0px 12px 16px rgba(255, 140, 0, 0.3);
+}
+
+.category-item img {
+    width: 20px;
+    height: 20px;
+}
+
+.category-item h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    height: 40px; /* Đảm bảo chiều cao cố định */
+    display: flex;
+    align-items: center; /* Căn giữa nội dung */
+    justify-content: center; /* Căn giữa ngang */
+}
+
+.category-item p {
+    font-size: 14px;
+    color: gray;
+    height: 30px; /* Đảm bảo chiều cao cố định */
+    display: flex;
+    align-items: center; /* Căn giữa nội dung */
+    justify-content: center; /* Căn giữa ngang */
+}
+
+.header {
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 50px; /* Tạo khoảng trắng phía trên */
+}
+.header h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.all-courses-btn {
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    background: none;
+    transition: 0.3s;
+}
+
+.all-courses-btn:hover {
+    background: black;
+    color: white;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.course-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: 0.3s;
+    position: relative; /* Đảm bảo badge có thể định vị */
+}
+
+.container-subtitle {
+    font-size: 16px;
+    color: gray;
+    margin-top: 10px;
+}
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-image img {
+    width: 100%;
+    height: auto;
+}
+
+.course-content {
+    padding: 20px;
+}
+
+/* Ẩn badge mặc định */
+.badge {
+    position: absolute;
+    background: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    top: 15px;
+    left: 15px;
+    font-size: 12px;
+    opacity: 0;         /* Ẩn badge */
+    visibility: hidden; /* Không chiếm không gian */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Hiệu ứng mượt */
+}
+
+/* Hiện badge khi hover vào course-card */
+.course-card:hover .badge {
+    opacity: 1;         /* Hiện badge */
+    visibility: visible; /* Cho phép hiển thị */
+}
+
+.course-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: gray;
+    font-size: 14px;
+}
+
+.price {
+    margin-top: 10px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.new-price {
+    color: red;
+    margin-left: 10px;
+}
+
+.view-more {
+    text-align: right;
+    margin-top: 15px;
+    font-weight: bold;
+}
+.banner-image{
+    margin-top: 50px; /* Điều chỉnh giá trị tùy ý */
+}
+
+/* Container chính */
+.stats-container {
+    display: flex;
+    justify-content: space-between; /* Canh đều các phần tử */
+    gap: 20px; /* Khoảng cách giữa các box */
+    margin: 50px 0; /* Cách phần trên/dưới */
+}
+
+/* Mỗi box thống kê */
+.stat-box {
+    background: #f7f7f7; /* Màu nền nhạt */
+    border-radius: 20px; /* Bo góc */
+    padding: 40px; /* Khoảng đệm bên trong */
+    text-align: center; /* Căn giữa nội dung */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    flex: 1; /* Chia đều kích thước */
+}
+
+/* Số liệu */
+.stat-number {
+    font-size: 32px; /* Kích thước số */
+    font-weight: bold; /* In đậm */
+    color: #ff7f32; /* Màu cam */
+    margin: 0;
+}
+
+/* Nhãn */
+.stat-label {
+    font-size: 16px; /* Cỡ chữ nhỏ hơn */
+    color: #555; /* Màu xám đậm */
+    margin-top: 10px; /* Tạo khoảng cách với số */
+}
+/* banner 3*/
+.lms-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.lms-banner-content {
+    width: 50%;
+}
+
+.lms-banner-content h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #222;
+}
+
+.lms-banner-content p {
+    font-size: 16px;
+    color: #666;
+    margin: 15px 0;
+}
+
+.lms-banner-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.lms-banner-content ul li {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.explore-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background-color: #ff6600;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    background-color: #cc5200;
+}
+
+.lms-banner-image {
+    width: 45%;
+}
+
+.lms-banner-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* banner 4 */
+.education-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: linear-gradient(to right, #f0a6ca, #a0c4ff);
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.education-banner-content {
+    width: 50%;
+    color: #222;
+    text-align: left;
+}
+
+.education-banner-content h5 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+    text-transform: uppercase;
+}
+
+.education-banner-content h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #222;
+    margin: 10px 0;
+}
+
+.education-banner-content p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.explore-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #ff6600;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    background-color: #cc5200;
+}
+
+.education-banner-image {
+    width: 45%;
+}
+
+.education-banner-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
