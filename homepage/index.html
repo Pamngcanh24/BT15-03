@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,17 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EduPress - Online Course</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- Header -->
     <header class="navbar">
-        <!-- Logo -->
         <div class="logo">
             <img src="image/LOGO.png" alt="EduPress">
         </div>
-
         <!-- Navigation -->
         <nav>
             <a href="#">Home</a>
@@ -26,7 +25,6 @@
             <a href="#">LearnPress Add-On</a>
             <a href="#">Premium Theme</a>
         </nav>
-
         <!-- Right section (Login/Register & Search) -->
         <div class="nav-right">
             <a href="#" class="btn">Login</a> /
@@ -34,12 +32,22 @@
             <img src="image/IconSearch.png" alt="Search" class="search-icon">
         </div>
     </header>
-     <!-- Banner -->
+     <!-- Banner1 -->
      <section class="banner">
-        <div class="banner-image">
-            <img src="./image/HERO BANNER.png" alt="Student Image">
+        <div class="navbar">
+            <div class="navbar_img">
+                <a href="#">
+                    <img src="./image/banner1.png" alt="Banner Image">
+                </a>
+            </div>            
+            <div class="navbar_content">
+                <h1>Build Skills with Online Course</h1>
+                <p>We denounce with righteous indignation and dislike men who are so beguiled and demoralized that cannot trouble.</p>
+                <input type="button" value="Post Comment" class="btn-comment">
+            </div>
         </div>
     </section>
+    
      <!-- Categories-->
      <section class="categories">
         <div class="categories-header">
@@ -49,6 +57,7 @@
             </div>
                 <button class="all-categories-btn">All Categories</button>
         </div>
+
         <div class="categories-grid">
             <div class="category-item">
                 <img src="./image/icon1.png" alt="Art & Design">
@@ -76,7 +85,7 @@
                 <p>38 Courses</p>
             </div>
             <div class="category-item">
-                <img src="./image/icon6.png "alt="Marketing">
+                <img src="./image/icon6.png" alt="Marketing">
                 <h3>Marketing</h3>
                 <p>38 Courses</p>
             </div>
@@ -103,7 +112,7 @@
         </div>
     
         <div class="container">
-            <div class="header">
+            <div class="course-header">
                 <div>
                     <h2>Featured Courses</h2>
                     <p class="container-subtitle">Explore our Popular Course</p> <!-- Chuyển xuống đây -->
@@ -240,18 +249,27 @@
             </div>
         </div>
              
-        <!-- Banner -->
-        <div class="banner-image">
-            <img src="./image/BANNER.png" alt="Student Image" >
-        </div>
-
+        <!-- Banner 2 -->
+        <section class="learnpress-banner">
+            <div class="learnpress-banner-image">
+                <a href="#">
+                    <img src="./image/banner2.png" alt="Banner Image">
+                </a>
+            </div>            
+            <div class="learnpress-banner-content">
+                <h1>LearnPress Add-Ons</h1>
+                <p>The next level of LearnPress - LMS WordPress plugin. More<br>
+                Power Flexible and Magical Inside</p>
+                <input type="button" value="Explore Course" class="btn-comment">
+            </div>
+        </section>
+        <!-- Stats -->
         <div class="stats-container">
             <!-- Active Students -->
             <div class="stat-box">
                 <h2 class="stat-number">25K+</h2>
                 <p class="stat-label">Active Students</p>
-            </div>
-        
+            </div>  
             <!-- Total Courses -->
             <div class="stat-box">
                 <h2 class="stat-number">899</h2>
@@ -288,22 +306,79 @@
         </div>
     </div>
     <!-- banner4 -->
-    <div class="education-banner">
-        <div class="education-banner-content">
-            <h5>PROVIDING AMAZING</h5>
-            <h2>Education Wordpress Theme</h2>
-            <p>The next level of LMS WordPress Theme. Learn anytime and anywhere.</p>
-            <a href="#" class="explore-btn">Explorer Course</a>
+        <div class="education-banner">
+            <div class="education-banner-image">
+                <a href="#">
+                    <img src="./image/banner4.png" alt="Education Wordpress Theme">
+                </a>
+            </div>            
+            <div class="education-banner-content">
+                <p class="sub-title">PROVIDING AMAZING</p>
+                <h1 class="title">Education Wordpress Theme</h1>
+                <p class="description">The next level of LMS WordPress Theme. Learn anytime and anywhere.</p>
+                <input type="button" value="Explore Course" class="explore-btn">
+            </div>
         </div>
-        <div class="education-banner-image">
-            <img src="./image/bann.png" alt="Education Wordpress Theme">
-        </div>
-    </div>
 
      </section>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Cột 1: Logo và mô tả -->
+        <div class="footer-column">
+            <img src="image/LOGO.png" alt="EduPress">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+        <!-- Cột 2: GET HELP -->
+        <div class="footer-column">
+            <h3>GET HELP</h3>
+            <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Latest Articles</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+
+        <!-- Cột 3: PROGRAMS -->
+        <div class="footer-column">
+            <h3>PROGRAMS</h3>
+            <ul>
+                <li><a href="#">Art & Design</a></li>
+                <li><a href="#" class="active">Business</a></li>
+                <li><a href="#">IT & Software</a></li>
+                <li><a href="#">Languages</a></li>
+                <li><a href="#">Programming</a></li>
+            </ul>
+        </div>
+
+        <!-- Cột 4: CONTACT US -->
+        <div class="footer-column">
+            <h3>CONTACT US</h3>
+            <p>Address: 2321 New Design St, Lorem Ipsum10, Hudson Yards, USA</p>
+            <p>Tel: + (123) 2500-567898</p>
+            <p>Mail: supportinfo@gmail.com</p>
+            <div class="social-icons">
+                <div class="social-icons">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                           
+            </div>
+        </div>
+    </div>
+    <!-- Phần bản quyền -->
+    <div class="footer-bottom">
+        <p>Copyright © 2024 LearnPress LMS | Powered by ThinPress</p>
+        <a href="#" title="scroll-top" class="scroll-top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+</footer>
 
 
-     
 </body>
 
 </html>
